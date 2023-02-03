@@ -1,0 +1,25 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="MySuite" verbose="1" parallel="tests" thread-count="5" >
+	<parameter name="browser" value="Chrome"/>
+  <test name="GoogleTest"  enabled="true">
+    <classes>
+       <class name="testNGXMLExample.Google" />
+       
+    </classes>
+  </test>
+ 
+  <test name="YahooTest" >
+	  <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="testNGXMLExample.Yahoo"/>      
+    </classes>
+  </test>
+   <test name="BingTest">
+	   <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testNGXMLExample.Bing"/>      
+    </classes>
+  </test>
+</suite>
